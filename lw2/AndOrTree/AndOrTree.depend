@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1546013602 source:/home/alex/Work/algorithms/lw2/AndOrTree/tree.cpp
+	"tree.h"
+
+1546009096 /home/alex/Work/algorithms/lw2/AndOrTree/tree.h
+	"IOmodul.h"
+
+1546002820 source:/home/alex/Work/algorithms/lw2/AndOrTree/main.cpp
+	"tree.h"
+
+1540755243 source:/home/alex/Work/algorithms/lw2/AndOrTree/IOmodul.cpp
+	"IOmodul.h"
+
+1540738599 /home/alex/Work/algorithms/lw2/AndOrTree/IOmodul.h
+	<set>
+	<cmath>
+	<string>
+	<fstream>
+	<string.h>
+	<cstddef>
+	<iostream>
+
+1540755242 source:/home/alexs/work/algorithms/lw2/AndOrTree/IOmodul.cpp
+	"IOmodul.h"
+
+1540738598 /home/alexs/work/algorithms/lw2/AndOrTree/IOmodul.h
+	<set>
+	<cmath>
+	<string>
+	<fstream>
+	<string.h>
+	<cstddef>
+	<iostream>
+
+1546002820 source:/home/alexs/work/algorithms/lw2/AndOrTree/main.cpp
+	"tree.h"
+
+1548093293 /home/alexs/work/algorithms/lw2/AndOrTree/tree.h
+	"IOmodul.h"
+
+1548094097 source:/home/alexs/work/algorithms/lw2/AndOrTree/tree.cpp
+	"tree.h"
+
