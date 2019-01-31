@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "ostream": "cpp",
+        "istream": "cpp",
+        "optional": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "iostream": "cpp",
+        "array": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "cmath": "cpp"
+    }
+}

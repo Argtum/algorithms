@@ -1,0 +1,70 @@
+# depslib dependency file v1.0
+1546013602 source:/home/alex/Work/algorithms/lw2/AndOrTree/tree.cpp
+	"tree.h"
+
+1546009096 /home/alex/Work/algorithms/lw2/AndOrTree/tree.h
+	"IOmodul.h"
+
+1546002820 source:/home/alex/Work/algorithms/lw2/AndOrTree/main.cpp
+	"tree.h"
+
+1540755243 source:/home/alex/Work/algorithms/lw2/AndOrTree/IOmodul.cpp
+	"IOmodul.h"
+
+1540738599 /home/alex/Work/algorithms/lw2/AndOrTree/IOmodul.h
+	<set>
+	<cmath>
+	<string>
+	<fstream>
+	<string.h>
+	<cstddef>
+	<iostream>
+
+1540755242 source:/home/alexs/work/algorithms/lw2/AndOrTree/IOmodul.cpp
+	"IOmodul.h"
+
+1540738598 /home/alexs/work/algorithms/lw2/AndOrTree/IOmodul.h
+	<set>
+	<cmath>
+	<string>
+	<fstream>
+	<string.h>
+	<cstddef>
+	<iostream>
+
+1548621765 source:/home/alexs/work/algorithms/lw2/AndOrTree/main.cpp
+	"tree.h"
+
+1548694856 /home/alexs/work/algorithms/lw2/AndOrTree/tree.h
+	"IOmodul.h"
+
+1548695831 source:/home/alexs/work/algorithms/lw2/AndOrTree/tree.cpp
+	"tree.h"
+
+1548919738 source:/home/alexs/work/algorithms/lw2/andortree_second/IOmodul.cpp
+	"IOmodul.h"
+
+1548919751 /home/alexs/work/algorithms/lw2/andortree_second/IOmodul.h
+	<set>
+	<cmath>
+	<string>
+	<fstream>
+	<string.h>
+	<cstddef>
+	<iostream>
+
+1548919604 source:/home/alexs/work/algorithms/lw2/andortree_second/main.cpp
+	"tree.h"
+
+1548918769 /home/alexs/work/algorithms/lw2/andortree_second/tree.h
+	"IOmodul.h"
+	"stek.h"
+
+1548919699 source:/home/alexs/work/algorithms/lw2/andortree_second/tree.cpp
+	"tree.h"
+
+1548907861 /home/alexs/work/algorithms/lw2/andortree_second/stek.h
+
+1548915394 source:/home/alexs/work/algorithms/lw2/andortree_second/stek.cpp
+	"stek.h"
+
