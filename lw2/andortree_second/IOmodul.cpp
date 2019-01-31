@@ -2,10 +2,9 @@
 
 void printStatus(int status)
 {
-    switch (status)
-    {
+    switch (status) {
         case ERR_SYMBOL:
-            cout << "название вершины должно быть в пределах A..Z или a..z" << endl << endl;
+            cout << "название вершины должно быть в пределах A..Z или a..z, уровень дерева обозначаеться *" << endl << endl;
         break;
         case ERR_NO_FILE:
             cout << "Файл не открыт!" << endl << endl;
@@ -23,24 +22,17 @@ top_param readStr(string inp_str, int status)
     int str_size;
     str_size = inp_str.length();
 
-    for(int i = 0; i < str_size && status == OK; i++)
-    {
-        if (strchr(accessSymbol, inp_str[i]))
-        {
+    for (int i = 0; i < str_size && status == OK; i++) {
+        if (strchr(accessSymbol, inp_str[i])) {
             top_stats.level = i;
-            if (strchr(ar_and, inp_str[i]))
-            {
+            if (strchr(ar_and, inp_str[i])) {
                 top_stats.topType = AND;
                 top_stats.topName = inp_str[i];
-            }
-            else if (strchr(ar_or, inp_str[i]))
-            {
+            } else if (strchr(ar_or, inp_str[i])) {
                 top_stats.topType = OR;
                 top_stats.topName = inp_str[i];
             }
-        }
-        else if(inp_str[i] != '*')
-        {
+        } else {
             status = ERR_SYMBOL;
         }
     }

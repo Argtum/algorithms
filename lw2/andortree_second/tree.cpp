@@ -54,6 +54,7 @@ void processingBinaryTree(tree **root)
     tree *tree_ptr = new tree;
     tree_ptr = nullptr;
     tree_ptr = *root;
+
     bool ignoreStek = YES;
 
     do {
@@ -64,6 +65,8 @@ void processingBinaryTree(tree **root)
             pop(&stek_top);
         }
         ignoreStek = NO;
+        cout << endl;
+        printStek(&stek_top);
         cout << endl;
     } while (stek_top);
 
@@ -105,7 +108,7 @@ void changeSan(stek **stek_top)
 bool setBans(tree **tree_ptr, stek **stek_top, bool ignoreStek)
 {
     if (*tree_ptr) {
-        if ((*tree_ptr)->type == OR) {
+        if ((*tree_ptr)->type == OR && (*tree_ptr)->read == NO) {
             if (ignoreStek) {
                 pushOrToStek(tree_ptr, stek_top);
             } else {
@@ -115,7 +118,9 @@ bool setBans(tree **tree_ptr, stek **stek_top, bool ignoreStek)
                 }
             }
         }
-        ignoreStek = setBans(&(*tree_ptr)->left, stek_top, ignoreStek);
+        if (!((*tree_ptr)->type == OR && (*tree_ptr)->read == YES)) {
+            ignoreStek = setBans(&(*tree_ptr)->left, stek_top, ignoreStek);
+        }
         if (!(*tree_ptr)->ban) {
             ignoreStek = setBans(&(*tree_ptr)->right, stek_top, ignoreStek);
         }
@@ -165,7 +170,9 @@ void printTree(tree **root)
             printTopLevel(tree_ptr->level);
             cout << tree_ptr->name << endl;
         }
-        printTree(&tree_ptr->left);
+        if (!(tree_ptr->type == OR && tree_ptr->read == YES)) {
+            printTree(&tree_ptr->left);
+        }
         if (!tree_ptr->ban) {
             printTree(&tree_ptr->right);
         }
