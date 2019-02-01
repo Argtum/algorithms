@@ -42,11 +42,17 @@ int main(int argc, char* argv[])
             while (getline(roads, inp_str)) {
                 new_roads = readRoads(inp_str);
                 matrix[new_roads.src - 1][new_roads.dest - 1] = new_roads.value;
+                matrix[new_roads.dest - 1][new_roads.src - 1] = new_roads.value;
             }
 
             for(int j = 0; j < matrixSize; j++){
                 for(int i = 0; i < matrixSize; i++){
-                    cout << matrix[i][j].dist << " ";
+                    cout << matrix[i][j].dist;
+                    if (matrix[i][j].hazar) {
+                        cout << "a  ";
+                    } else {
+                        cout << "   ";
+                    }
                 }
                 cout << endl;
             }
@@ -56,8 +62,7 @@ int main(int argc, char* argv[])
 
         cityes.close();
         roads.close();
-    }
-    else {
+    } else {
         cout << "ОШИБКА! Неправильно указан фаил" << endl << endl;
     }
 
