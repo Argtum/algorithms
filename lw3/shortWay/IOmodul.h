@@ -8,6 +8,7 @@
 #include <string.h>
 #include <cstddef>
 #include <iostream>
+#include <locale.h>
 
 using namespace std;
 
@@ -19,10 +20,6 @@ const int ERR_NO_CITY_NAME = 3;
 const bool YES = true;
 const bool NO = false;
 
-struct connect;
-struct city;
-struct cityParam;
-
 const char accessSymbol[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
 struct cityParam
@@ -31,21 +28,28 @@ struct cityParam
     char name;
 };
 
+struct roadValue
+{
+    int dist;
+    bool hazar;
+};
+
+struct roadParam
+{
+    int src;
+    int dest;
+    roadValue value;
+};
+
 struct city
 {
     char index;
     char name;
     city *next;
-    connect *connectTo;
-};
-
-struct connect
-{
-    city *dest;
-    connect *next;
 };
 
 void printStatus(int status);
-cityParam readStr(string inp_str, int status);
+cityParam readCitys(string inp_str);
+roadParam readRoads(string inp_str);
 
 #endif //IOMODUL_H

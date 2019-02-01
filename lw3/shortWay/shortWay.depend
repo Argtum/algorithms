@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1549023116 source:/home/alexs/work/algorithms/lw3/shortWay/graf.cpp
+1549036692 source:/home/alexs/work/algorithms/lw3/shortWay/graf.cpp
 	"graf.h"
 
-1549022139 /home/alexs/work/algorithms/lw3/shortWay/graf.h
+1549036691 /home/alexs/work/algorithms/lw3/shortWay/graf.h
 	"IOmodul.h"
 
-1549024695 /home/alexs/work/algorithms/lw3/shortWay/IOmodul.h
+1549036813 /home/alexs/work/algorithms/lw3/shortWay/IOmodul.h
 	<set>
 	<cmath>
 	<string>
@@ -13,10 +13,11 @@
 	<string.h>
 	<cstddef>
 	<iostream>
+	<locale.h>
 
-1549020812 source:/home/alexs/work/algorithms/lw3/shortWay/main.cpp
+1549030365 source:/home/alexs/work/algorithms/lw3/shortWay/main.cpp
 	"graf.h"
 
-1549024666 source:/home/alexs/work/algorithms/lw3/shortWay/IOmodul.cpp
+1549034917 source:/home/alexs/work/algorithms/lw3/shortWay/IOmodul.cpp
 	"IOmodul.h"
 

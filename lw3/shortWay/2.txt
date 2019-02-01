@@ -1,6 +1,9 @@
-AC AF
-BC BE BF
-CA CB CD CF
-DC DE
-ED EF
-FA FB FC FE
+13 7 n
+16 3 n
+23 2 y
+25 6 n
+26 5 y
+34 1 y
+36 8 n
+45 4 n
+56 2 n

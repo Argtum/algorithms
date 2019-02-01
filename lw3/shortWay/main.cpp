@@ -12,39 +12,53 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    int status = OK;
     string cityFile;
-    string connectionFile;
+    string roadFile;
     city *cityList = new city;
     cityList = nullptr;
+    roadValue matrix[100][100];
+    int matrixSize;
 
     if (argc != 3) {
         cout << "Введите имя файла c городами: ";
         cin >> cityFile;
         cout << "Введите имя файла с дорогами: ";
-        cin >> connectionFile;
+        cin >> roadFile;
     } else {
         cityFile = argv[1];
-        connectionFile = argv[2];
+        roadFile = argv[2];
     }
     ifstream cityes(cityFile);
-    ifstream connections(connectionFile);
+    ifstream roads(roadFile);
 
-    if (cityes.is_open() && connections.is_open()) {
+    if (cityes.is_open() && roads.is_open()) {
         cout << "Все ОК! Оба файла открыты!\n" << endl;
-        status = createSityList(cityes, &cityList, status);
+
+        matrixSize = createSityList(cityes, &cityList);
+        if (matrixSize) {
+            string inp_str;
+            roadParam new_roads;
+
+            while (getline(roads, inp_str)) {
+                new_roads = readRoads(inp_str);
+                matrix[new_roads.src - 1][new_roads.dest - 1] = new_roads.value;
+            }
+
+            for(int j = 0; j < matrixSize; j++){
+                for(int i = 0; i < matrixSize; i++){
+                    cout << matrix[i][j].dist << " ";
+                }
+                cout << endl;
+            }
+        } else {
+            cout << "ОШИБКА! Нулевая матрица, нет городов" << endl << endl;
+        }
 
         cityes.close();
-        connections.close();
+        roads.close();
     }
     else {
-        status = ERR_NO_FILE;
-    }
-
-    if (status == OK) {
-
-    } else {
-        printStatus(status);
+        cout << "ОШИБКА! Неправильно указан фаил" << endl << endl;
     }
 
     return 0;

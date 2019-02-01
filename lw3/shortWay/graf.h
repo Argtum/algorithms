@@ -3,6 +3,6 @@
 
 #include "IOmodul.h"
 
-int createSityList(ifstream &cityes, city **sityList, int status);
+int createSityList(ifstream &cityes, city **sityList);
 
 #endif //GRAF_H
