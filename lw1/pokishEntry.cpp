@@ -84,7 +84,7 @@ int writePolishEnrty(char lexem, item **stackTop)
                 }
                 PushSymbolToStack(stackTop, lexem);
             }
-            if(strchr(exponent, lexem) && inputPriopity < stackPriopity)
+            if(strchr(exponent, lexem) && inputPriopity <= stackPriopity)
             {
                 while(*stackTop != NULL && (*stackTop) -> value != '(')
                 {

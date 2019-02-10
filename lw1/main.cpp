@@ -39,5 +39,6 @@ int main(int argc, char* argv[])
 
     WriteData(&itemPtr);
     Calculation(&itemPtr);
+
     return 0;
 }

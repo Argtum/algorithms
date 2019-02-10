@@ -4,13 +4,13 @@ void printStatus(int status)
 {
     switch (status) {
         case ERR_NO_FILE:
-            cout << "ОШИБКА! Неправильно указан фаил" << endl << endl;
+            cout << "ОШИБКА! Неправильно указано имя фаил или такого файла нет" << endl << endl;
         break;
-        case ERR_NO_CITY_INDEX:
-            cout << "ОШИБКА! Не указан индекс города" << endl << endl;
+        case ERR_NO_CITY:
+            cout << "ОШИБКА! Фаил с городами пуст" << endl << endl;
         break;
-        case ERR_NO_CITY_NAME:
-            cout << "ОШИБКА! Не указано имя города" << endl << endl;
+        case ERR_NO_ROAD:
+            cout << "ОШИБКА! Фаил с дорогами пуст" << endl << endl;
         break;
         default:
             cout << "неизвестная ошибка" << endl << endl;
@@ -33,14 +33,22 @@ roadParam readRoads(string inp_str)
 
     new_road.src = inp_str[0] - '0';
     new_road.dest = inp_str[1] - '0';
-    new_road.value.dist = inp_str[3] - '0';
+    new_road.value = inp_str[3] - '0';
     if (inp_str[5] == 'y') {
-        new_road.value.hazar = true;
-    } else if (inp_str[5] == 'n') {
-        new_road.value.hazar = false;
-    } else {
-        cout << "ERROR: неуказана аварийность дороги" << endl;
+        new_road.value *= 100;
     }
 
     return new_road;
+}
+
+void printArr(marks arr[], int start, int finish)
+{
+    int curr = finish;
+
+    cout << "кратчайший путь из " << start << " в " << finish << ": " << endl << finish << " ";
+
+    while (curr != start) {
+        cout << arr[curr].mark << " ";
+        curr = arr[curr].mark;
+    }
 }

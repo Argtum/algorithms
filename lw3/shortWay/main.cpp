@@ -16,7 +16,8 @@ int main(int argc, char* argv[])
     string roadFile;
     city *cityList = new city;
     cityList = nullptr;
-    roadValue matrix[100][100];
+    int status = OK;
+    int matrix[100][100];
     int matrixSize;
 
     if (argc != 3) {
@@ -32,38 +33,48 @@ int main(int argc, char* argv[])
     ifstream roads(roadFile);
 
     if (cityes.is_open() && roads.is_open()) {
-        cout << "Все ОК! Оба файла открыты!\n" << endl;
+        cout << endl << "Все ОК! Оба файла открыты!\n" << endl;
 
         matrixSize = createSityList(cityes, &cityList);
         if (matrixSize) {
             string inp_str;
             roadParam new_roads;
 
-            while (getline(roads, inp_str)) {
-                new_roads = readRoads(inp_str);
-                matrix[new_roads.src - 1][new_roads.dest - 1] = new_roads.value;
-                matrix[new_roads.dest - 1][new_roads.src - 1] = new_roads.value;
-            }
-
-            for(int j = 0; j < matrixSize; j++){
-                for(int i = 0; i < matrixSize; i++){
-                    cout << matrix[i][j].dist;
-                    if (matrix[i][j].hazar) {
-                        cout << "a  ";
-                    } else {
-                        cout << "   ";
-                    }
+            int file_size = roads.tellg();
+            if (!file_size) {
+                status = ERR_NO_ROAD;
+            } else {
+                while (getline(roads, inp_str)) {
+                    new_roads = readRoads(inp_str);
+                    matrix[new_roads.src - 1][new_roads.dest - 1] = new_roads.value;
+                    matrix[new_roads.dest - 1][new_roads.src - 1] = new_roads.value;
                 }
-                cout << endl;
+
+                for(int j = 0; j < matrixSize; j++){
+                    for(int i = 0; i < matrixSize; i++){
+                        if (matrix[i][j] / 100 < 1) {
+                            cout << " " << matrix[i][j] << "   ";
+                        } else {
+                            cout << matrix[i][j] << "  ";
+                        }
+                    }
+                    cout << endl;
+                }
             }
         } else {
-            cout << "ОШИБКА! Нулевая матрица, нет городов" << endl << endl;
+            status = ERR_NO_CITY;
         }
 
         cityes.close();
         roads.close();
     } else {
-        cout << "ОШИБКА! Неправильно указан фаил" << endl << endl;
+        status = ERR_NO_FILE;
+    }
+
+    if (!status) {
+        searchWay(matrix, matrixSize);
+    } else {
+        printStatus(status);
     }
 
     return 0;

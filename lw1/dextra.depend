@@ -74,15 +74,73 @@
 1548921857 /home/alexs/work/algorithms/lw1/stack.h
 	<iostream>
 
-1548921857 source:/home/alexs/work/algorithms/lw1/main.cpp
+1549051505 source:/home/alexs/work/algorithms/lw1/main.cpp
 	"main.h"
 
 1538346724 /home/alexs/work/algorithms/lw1/main.h
 	"IOModul.h"
 
-1548921857 source:/home/alexs/work/algorithms/lw1/pokishEntry.cpp
+1549051946 source:/home/alexs/work/algorithms/lw1/pokishEntry.cpp
 	"polishEntry.h"
 
 1548921857 source:/home/alexs/work/algorithms/lw1/stack.cpp
+	"stack.h"
+
+1548921857 source:/home/alexs/work/temp/lw1/IOModul.cpp
+	"IOModul.h"
+
+1548921857 /home/alexs/work/temp/lw1/IOModul.h
+	<fstream>
+	<cmath>
+	<float.h>
+	"polishEntry.h"
+
+1548921857 /home/alexs/work/temp/lw1/polishEntry.h
+	<set>
+	<string.h>
+	"stack.h"
+
+1548921857 /home/alexs/work/temp/lw1/stack.h
+	<iostream>
+
+1549051505 source:/home/alexs/work/temp/lw1/main.cpp
+	"main.h"
+
+1538346724 /home/alexs/work/temp/lw1/main.h
+	"IOModul.h"
+
+1548921857 source:/home/alexs/work/temp/lw1/stack.cpp
+	"stack.h"
+
+1549051992 source:/home/alexs/work/temp/lw1/pokishEntry.cpp
+	"polishEntry.h"
+
+1548921857 source:/home/alexs/work/algorithms/lw4/IOModul.cpp
+	"IOModul.h"
+
+1548921857 /home/alexs/work/algorithms/lw4/IOModul.h
+	<fstream>
+	<cmath>
+	<float.h>
+	"polishEntry.h"
+
+1548921857 /home/alexs/work/algorithms/lw4/polishEntry.h
+	<set>
+	<string.h>
+	"stack.h"
+
+1548921857 /home/alexs/work/algorithms/lw4/stack.h
+	<iostream>
+
+1549051505 source:/home/alexs/work/algorithms/lw4/main.cpp
+	"main.h"
+
+1538346724 /home/alexs/work/algorithms/lw4/main.h
+	"IOModul.h"
+
+1549051992 source:/home/alexs/work/algorithms/lw4/pokishEntry.cpp
+	"polishEntry.h"
+
+1548921857 source:/home/alexs/work/algorithms/lw4/stack.cpp
 	"stack.h"
 
