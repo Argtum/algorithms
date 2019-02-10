@@ -40,8 +40,7 @@ int main(int argc, char* argv[])
             string inp_str;
             roadParam new_roads;
 
-            int file_size = roads.tellg();
-            if (!file_size) {
+            if (roads.peek() == ifstream::traits_type::eof()) {
                 status = ERR_NO_ROAD;
             } else {
                 while (getline(roads, inp_str)) {
