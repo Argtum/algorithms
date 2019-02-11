@@ -20,10 +20,7 @@ const int ERR_NO_FILE = 1;
 const int ERR_NO_CITY = 2;
 const int ERR_NO_ROAD = 3;
 
-const bool YES = true;
-const bool NO = false;
-
-const char accessSymbol[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+const char numbers[] = "0123456789";
 
 struct cityParam
 {
@@ -52,9 +49,16 @@ struct city
     city *next;
 };
 
+struct cityInterval
+{
+    int start;
+    int finish;
+};
+
 void printStatus(int status);
 cityParam readCitys(string inp_str);
 roadParam readRoads(string inp_str);
 void printArr(marks arr[], int start, int finish);
+cityInterval getIntervalCity(int matrixSize);
 
 #endif //IOMODUL_H

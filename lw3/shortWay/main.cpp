@@ -36,6 +36,11 @@ int main(int argc, char* argv[])
         cout << endl << "Все ОК! Оба файла открыты!\n" << endl;
 
         matrixSize = createSityList(cityes, &cityList);
+        for(int j = 0; j < matrixSize; j++){
+            for(int i = 0; i < matrixSize; i++){
+                matrix[i][j] = MAX_VALUE;
+            }
+        }
         if (matrixSize) {
             string inp_str;
             roadParam new_roads;
