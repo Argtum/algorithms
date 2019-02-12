@@ -57,7 +57,7 @@
 1538935778 source:/home/alex/Work/algorithms/stack.cpp
 	"stack.h"
 
-1548921857 source:/home/alexs/work/algorithms/lw1/IOModul.cpp
+1549940682 source:/home/alexs/work/algorithms/lw1/IOModul.cpp
 	"IOModul.h"
 
 1548921857 /home/alexs/work/algorithms/lw1/IOModul.h
@@ -80,7 +80,7 @@
 1538346724 /home/alexs/work/algorithms/lw1/main.h
 	"IOModul.h"
 
-1549051946 source:/home/alexs/work/algorithms/lw1/pokishEntry.cpp
+1549051992 source:/home/alexs/work/algorithms/lw1/pokishEntry.cpp
 	"polishEntry.h"
 
 1548921857 source:/home/alexs/work/algorithms/lw1/stack.cpp
@@ -143,4 +143,7 @@
 
 1548921857 source:/home/alexs/work/algorithms/lw4/stack.cpp
 	"stack.h"
+
+1549940388 source:/home/alexs/work/algorithms/lw1/polishEntry.cpp
+	"polishEntry.h"
 

@@ -2,12 +2,13 @@
 
 char lexem;
 int cnt = 0;
-item *stackTop = NULL;
-floatItem *floatStackTop = NULL;
 int status = 0; // 0 - всё хорошо,
 
 void ReadInputData(ifstream &inputFile)
 {
+    item *stackTop = new item;
+    stackTop = nullptr;
+
     while((lexem = inputFile.get()) != EOF && status == 0)
     {
         cnt++;
@@ -66,6 +67,9 @@ float elem, elem1, elem2;
 
 void Calculation(item **itemPtr)
 {
+    floatItem *floatStackTop = new floatItem;
+    floatStackTop = nullptr;
+
     while(*itemPtr != NULL && status == 0)
     {
         if((*itemPtr) -> value == '#')
@@ -120,7 +124,7 @@ void Calculation(item **itemPtr)
             else
             {
                 cout << (*itemPtr) -> value << " = ";
-                if (cin>>elem && cin.good())
+                if (cin >> elem && cin.good())
                 {
                     PushValueToStack((*itemPtr) -> value, elem);
                 }
